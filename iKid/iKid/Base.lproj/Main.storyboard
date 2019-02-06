@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BJj-F3-t1R" kind="relationship" relationship="viewControllers" id="Op8-AU-FIR"/>
+                        <segue destination="kiU-i1-biF" kind="relationship" relationship="viewControllers" id="rmz-Qe-uTh"/>
+                        <segue destination="TD1-gl-r6X" kind="relationship" relationship="viewControllers" id="WSX-w1-p0I"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Pun-->
+        <scene sceneID="WnJ-7y-XpH">
+            <objects>
+                <viewController id="BJj-F3-t1R" customClass="PunViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1mr-mV-eZR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="I entered a joke competition once with 10 puns." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dM-MG-GoR">
+                                <rect key="frame" x="16" y="152" width="343" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="OO3-cY-JC4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="jqc-24-0TN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5a0-uS-VTI">
+                                <rect key="frame" x="292" y="556" width="58" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="punButton:" destination="BJj-F3-t1R" eventType="touchUpInside" id="iKz-Vz-oeP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48167366369999998" green="0.78814647520000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ung-0S-wip" firstAttribute="trailing" secondItem="5a0-uS-VTI" secondAttribute="trailing" constant="25" id="0gF-AI-ruv"/>
+                            <constraint firstItem="ung-0S-wip" firstAttribute="bottom" secondItem="5a0-uS-VTI" secondAttribute="bottom" constant="18" id="9H9-Hc-Qfk"/>
+                            <constraint firstAttribute="centerX" secondItem="5dM-MG-GoR" secondAttribute="centerX" id="ClS-mK-gCO"/>
+                            <constraint firstAttribute="centerY" secondItem="5dM-MG-GoR" secondAttribute="centerY" id="zLh-me-vjh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ung-0S-wip"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pun" image="second" id="TYo-lf-zRf"/>
+                    <connections>
+                        <outlet property="joke" destination="5dM-MG-GoR" id="Toq-MJ-h6F"/>
+                        <outlet property="punView" destination="1mr-mV-eZR" id="dGt-kY-aUf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWV-U4-oBV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="815"/>
+        </scene>
+        <!--Dad-->
+        <scene sceneID="rdD-wE-xYP">
+            <objects>
+                <viewController id="kiU-i1-biF" customClass="DadViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kEY-VF-IIP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="I don't always tell dad jokes..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wo3-b4-fCq">
+                                <rect key="frame" x="16" y="152" width="343" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="YR0-X6-Ohw"/>
+                                    <constraint firstAttribute="width" constant="343" id="xKB-7R-RIS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZU-NV-eLo">
+                                <rect key="frame" x="292" y="556" width="58" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dadButton:" destination="kiU-i1-biF" eventType="touchUpInside" id="umU-wE-fsk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4651188061" green="1" blue="0.51928836099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Wo3-b4-fCq" secondAttribute="centerY" id="CNo-dN-loX"/>
+                            <constraint firstItem="BQn-vD-IdD" firstAttribute="bottom" secondItem="8ZU-NV-eLo" secondAttribute="bottom" constant="18" id="D62-Gk-czq"/>
+                            <constraint firstItem="BQn-vD-IdD" firstAttribute="trailing" secondItem="8ZU-NV-eLo" secondAttribute="trailing" constant="25" id="FWe-Mx-z8J"/>
+                            <constraint firstAttribute="centerX" secondItem="Wo3-b4-fCq" secondAttribute="centerX" id="cW7-g0-25U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BQn-vD-IdD"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dad" image="second" id="pcw-Ai-sMq"/>
+                    <connections>
+                        <outlet property="dadView" destination="kEY-VF-IIP" id="BZD-ae-mP3"/>
+                        <outlet property="joke" destination="Wo3-b4-fCq" id="rbP-OU-Jmb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jOS-Gh-FbM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="-478"/>
+        </scene>
+        <!--Knock-Knock-->
+        <scene sceneID="qbD-FW-dXI">
+            <objects>
+                <viewController id="TD1-gl-r6X" customClass="KnockKnockViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="75m-6k-PTO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="I entered a joke competition once with 10 puns." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jan-4D-VKC">
+                                <rect key="frame" x="16" y="152" width="343" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Ylv-6o-Em8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="v01-ki-wTa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIL-OG-717">
+                                <rect key="frame" x="292" y="556" width="58" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="KnockKnockButton:" destination="TD1-gl-r6X" eventType="touchUpInside" id="cxx-uJ-h1z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.73400994720000001" blue="0.64327451579999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="C7Y-Xs-rWr" firstAttribute="trailing" secondItem="MIL-OG-717" secondAttribute="trailing" constant="25" id="Vgy-Gl-S6U"/>
+                            <constraint firstAttribute="centerY" secondItem="Jan-4D-VKC" secondAttribute="centerY" id="hGi-zj-vlm"/>
+                            <constraint firstItem="C7Y-Xs-rWr" firstAttribute="bottom" secondItem="MIL-OG-717" secondAttribute="bottom" constant="18" id="q2A-dp-QQG"/>
+                            <constraint firstAttribute="centerX" secondItem="Jan-4D-VKC" secondAttribute="centerX" id="zT6-GJ-0vv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C7Y-Xs-rWr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Knock-Knock" image="second" id="saI-L9-fmL"/>
+                    <connections>
+                        <outlet property="KnockKnockView" destination="75m-6k-PTO" id="mOZ-tF-AoK"/>
+                        <outlet property="joke" destination="Jan-4D-VKC" id="DW6-J1-7h7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNv-10-1IC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="376"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
